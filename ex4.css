@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-top {
+    border-top: 3px solid transparent; 
+}
+
+.card-bottom {
+    border-top: 3px solid transparent;
+}
+
+
+.blue-border {
+    border-top: 3px solid #66cff4;
+}
+
+.orange-border {
+    border-top: 3px solid #ffaa42; 
+}
+
+.time {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.blue {
+    color: #00bcd4; 
+
+.orange {
+    color: #ff9800; /
+}
+}
+
+.blue-green-icon {
+    color: #00bcd4;
+}
+
+
+.fa-language::before {
+    content: "\f02d"; 
+    color: #00bcd4;
+    font-family: "Font Awesome 6 Free";
+}
+.fa-language {
+    position: relative;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+.fa-language::after {
+    content: 'G';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #4CAF50; 
+}
+
+
+.text {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}

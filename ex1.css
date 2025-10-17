@@ -1,0 +1,27 @@
+body{
+    font-family: sans-serif, Arial, Helvetica;
+}.box{
+    background-color: purple;
+    width: 100%;
+    height:80px;
+    display: flex;
+    color: white;
+    border-color: aqua;
+    border-width:2px;
+    border-style: solid;
+    padding:30px
+}
+h2{
+    background-color: orange;
+    color: white;
+}
+.red{
+    color: white;
+    background-color: red;
+    margin-bottom: 15px;
+}
+.blue{
+    color:white;
+    background-color: blue;
+}
+

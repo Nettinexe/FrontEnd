@@ -1,0 +1,44 @@
+body{
+    margin:0;
+    padding: 10px;
+    font-family: sans-serif,Arial, Helvetica;
+}
+.page{
+        border:solid, 2px, red;
+    padding: 30px;
+    margin-bottom: 30px;
+    outline-width: 2px;
+    outline-color: blue;
+    outline-style: dotted;
+}
+.caixa-externa{
+    border:solid, 2px, red;
+    padding: 30px;
+    margin-bottom: 30px;
+    outline-width: 2px;
+    outline-color: blue;
+    outline-style: dotted;
+}
+.caixa-externa2{
+    border:solid, 2px, red;
+    padding: 30px;
+    outline-width: 2px;
+    outline-color: blue;
+    outline-style: dotted;
+}
+.container-principal{
+    border: solid,2px,red;
+    padding: 40px;
+}
+.container-secundario{
+    border: solid,2px,red;
+    padding: 30px;
+}
+.container-secundario h1{
+    border: solid,2px,red;
+    padding: 10px;
+}
+.container-secundario p{
+    border: solid,2px,red;
+    padding: 10px;
+}

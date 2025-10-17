@@ -1,0 +1,72 @@
+/* Base */
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#f3f5f7;
+  color:#0f172a;
+}
+
+/* Grid */
+.container-4{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:10px;
+  max-width:1100px;
+  margin:32px auto;
+  padding:0 16px;
+}
+@media (max-width:980px){ .container-4{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:620px){ .container-4{ grid-template-columns:1fr; } }
+
+/* Card */
+.card{
+  background:#fff;
+  border:2px solid #CDECF1;   /* borda suave geral */
+  border-radius:16px;
+  padding: 0 0 18px;;
+  min-height:180px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+  overflow:hidden;             /* barra acompanha o raio */
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,.10); }
+
+/* Borda por linha (só ajusta a cor da borda externa) */
+.blue-border{   border-color:#35C9D5; }
+.orange-border{ border-color:#F7C977; }
+
+/* Barra do topo (azul) */
+.time-blue{
+  display:block;
+  width:100%;
+  text-align:center;
+  font-weight:700;
+  padding:10px 12px;
+  background:#E9FBFF;              /* pastel */
+  border-bottom:2px solid #35C9D5; /* linha inferior */
+  color:#0EA5A4;                   /* texto */
+}
+
+/* Barra do topo (bege) */
+.time-orange{
+  display:block;
+  width:100%;
+  text-align:center;
+  font-weight:700;
+  padding:10px 12px;
+  background:#FFF6E5;              /* pastel */
+  border-bottom:2px solid #F7C977; /* linha inferior */
+  color:#F59E0B;                   /* texto */
+}
+
+/* Conteúdo do card */
+.icon{ font-size:36px; margin-top:8px; }
+.text{ font-size:18px; font-weight:700; }
+
+/* Cores dos ícones/textos conforme a linha */
+.blue-border .icon, .blue-border .text{ color:#0EA5A4; }
+.orange-border .icon, .orange-border .text{ color:#F97316; }

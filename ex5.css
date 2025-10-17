@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container-5 {
+    background: linear-gradient(to right, #ff9800, #ff4d4d); /* Gradiente de fundo sutil */
+    padding: 30px; /* Preenchimento em torno do cartão branco */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-5 {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 30px 40px 0; /* Preenchimento interno, menos à esquerda */
+    position: relative; /* Para posicionar o scrollbar */
+    max-width: 650px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 180px;
+    background: linear-gradient(to top right, #ffaa42, #f53d2d); /* Gradiente vibrante */
+    border-radius: 10px;
+    margin-left: -40px; /* Puxa para fora do cartão branco para sobreposição */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Impede que o bloco encolha */
+}
+
+.content {
+    padding-left: 30px; /* Espaço entre o placeholder e o texto */
+    flex-grow: 1;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin: 5px 0 10px 0;
+}
+
+.description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    background-color: #ff5722; /* Laranja avermelhado */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 87, 34, 0.4);
+}
+
+.read-more-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Scrollbar (elementos decorativos no canto) */
+.scrollbar {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 15px;
+    background-color: #ff5722;
+    border-radius: 4px;
+}

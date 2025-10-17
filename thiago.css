@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(green,white);
+    width: 100%;
+    height: 100%;
+}.porro img{
+    width: 500px;
+    height: 500px;
+}
+.title h1{
+    color: white;
+}
