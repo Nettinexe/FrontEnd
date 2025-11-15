@@ -1,0 +1,47 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Boas-Vindas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #mensagem {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mensagem de Boas-Vindas com Confirmação</h1>
+    <p id="mensagem">Aguardando a sua resposta...</p>
+
+    <script>
+        // Função que será executada assim que o corpo da página for carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Mostra um alert de confirmação
+            // A função confirm() bloqueia a execução e é executada imediatamente ao carregar a página.
+            const confirmacao = confirm("Deseja ver a mensagem secreta?");
+
+            // Pega o elemento onde a mensagem será exibida
+            const elementoMensagem = document.getElementById('mensagem');
+
+            // 2. Verifica a resposta do usuário
+            if (confirmacao) {
+                // Se o usuário clicou OK
+                elementoMensagem.innerHTML = "Você confirmou! Que bom ter você aqui.";
+            } else {
+                // Se o usuário clicou Cancelar
+                elementoMensagem.innerHTML = "Tudo bem! Talvez da próxima vez.";
+            }
+        });
+    </script>
+
+</body>
+</html>

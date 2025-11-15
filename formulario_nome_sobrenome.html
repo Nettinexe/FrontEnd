@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário UniAcademia</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #34495e;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+  
+        .flex-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+  
+        .flex-item {
+            flex: 1;
+            min-width: 200px; 
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+
+        .radio-group, .checkbox-group {
+            padding-top: 5px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .radio-group input, .checkbox-group input {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        button[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulário do Aluno - UniAcademia</h1>
+        <p>Por favor, preencha os dados abaixo para conhecermos você melhor.</p>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>1️⃣ Dados Pessoais</legend>
+
+                <div class="flex-group">
+                    <div class="form-group flex-item">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome_aluno" placeholder="Digite seu nome" required maxlength="100">
+                    </div>
+                    <div class="form-group flex-item">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome_aluno" placeholder="Digite seu sobrenome" required maxlength="100">
+                    </div>
+                </div>
+
+                <div class="flex-group">
+                    <div class="form-group flex-item">
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="date" id="nascimento" name="data_nascimento" required>
+                    </div>
+                    <div class="form-group flex-item">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email_aluno" placeholder="exemplo@dominio.com" required>
+                    </div>
+                </div>
+
+                <div class="flex-group">
+                    <div class="form-group flex-item">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone_aluno" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
+                    <div class="form-group flex-item">
+                        <label>Sexo:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sexo" value="masculino" required> Masculino</label>
+                            <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                            <label><input type="radio" name="sexo" value="outro"> Outro</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+ 
+            <fieldset>
+                <legend>2️⃣ Endereço</legend>
+                
+                <div class="flex-group">
+                    <div class="form-group" style="flex-basis: 70%;">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua" placeholder="Nome da sua rua" required maxlength="150">
+                    </div>
+                    <div class="form-group" style="flex-basis: 25%;">
+                        <label for="numero">Número:</label>
+                        <input type="number" id="numero" name="numero" placeholder="Ex: 123" required>
+                    </div>
+                </div>
+
+                <div class="flex-group">
+                    <div class="form-group flex-item">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" required maxlength="100">
+                    </div>
+                    <div class="form-group flex-item">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required maxlength="100">
+                    </div>
+                    <div class="form-group flex-item">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+   
+            <fieldset>
+                <legend>3️⃣ Preferências</legend>
+                <div class="form-group">
+                    <label>Selecione seus interesses (pode marcar mais de um):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interesses" value="jogos"> Jogos</label>
+                        <label><input type="checkbox" name="interesses" value="novela"> Novela</label>
+                        <label><input type="checkbox" name="interesses" value="noticias"> Notícias</label>
+                        <label><input type="checkbox" name="interesses" value="filmes"> Filmes</label>
+                        <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+                        <label><input type="checkbox" name="interesses" value="musica"> Música</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>4️⃣ Curso e Período</legend>
+                <div class="flex-group">
+                    <div class="form-group flex-item">
+                        <label for="curso">Curso:</label>
+                        <input type="text" id="curso" name="curso" placeholder="Nome do seu curso" required maxlength="100">
+                    </div>
+                    <div class="form-group flex-item">
+                        <label for="periodo">Período:</label>
+                        <select id="periodo" name="periodo" required>
+                            <option value="" disabled selected>Selecione o período</option>
+                            <option value="manha">Manhã</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noite">Noite</option>
+                            <option value="integral">Integral</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            
+  
+            <fieldset>
+                <legend>5️⃣ Rede Social</legend>
+                <div class="form-group">
+                    <label for="rede_social">Link da rede social mais utilizada (Opcional):</label>
+                    <input type="url" id="rede_social" name="rede_social" placeholder="https://www.exemplo.com/seu-perfil">
+                </div>
+            </fieldset>
+
+ 
+            <fieldset>
+                <legend>6️⃣ Opinião</legend>
+                <div class="form-group">
+                    <label for="opiniao">Deixe sua opinião ou sugestão (Opcional):</label>
+                    <textarea id="opiniao" name="opiniao" rows="5" placeholder="Digite sua mensagem aqui..." maxlength="1000"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="button-container">
+                <button type="submit">Enviar Cadastro</button>
+                <button type="reset">Limpar Campos</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
